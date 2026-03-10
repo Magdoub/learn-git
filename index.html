@@ -82,6 +82,26 @@
       font-size: 1.2rem;
       box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
     }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .social-icon {
+      width: 32px;
+      height: 32px;
+      border: 2px solid white;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .social-icon:hover {
+      background: rgba(255,255,255,0.1);
+    }
   </style>
 </head>
 <body>
@@ -97,6 +117,12 @@
 
   <footer>
     <p>im a footer</p>
+    <div class="social-icons">
+      <div class="social-icon"></div>
+      <div class="social-icon"></div>
+      <div class="social-icon"></div>
+      <div class="social-icon"></div>
+    </div>
   </footer>
 
   <script>
