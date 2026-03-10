@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: #f5f5f5;
+    }
+    h1 { color: #333; }
+    #status {
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello World</h1>
+  <p id="status">Watching for git changes...</p>
+
+  <script>
+    let lastVersion = null;
+
+    async function checkVersion() {
+      try {
+        const res = await fetch('version.txt?t=' + Date.now());
+        const version = await res.text();
+        if (lastVersion === null) {
+          lastVersion = version;
+        } else if (version !== lastVersion) {
+          document.getElementById('status').textContent = 'Git change detected — reloading...';
+          setTimeout(() => location.reload(), 300);
+        }
+      } catch (e) {
+        // version.txt not yet available
+      }
+    }
+
+    setInterval(checkVersion, 1000);
+    checkVersion();
+  </script>
+</body>
+</html>
