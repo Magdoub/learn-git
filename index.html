@@ -71,6 +71,17 @@
       font-size: 0.85rem;
       color: #888;
     }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #222;
+      padding: 24px;
+      text-align: center;
+      color: white;
+      font-size: 1.2rem;
+      box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
@@ -83,6 +94,10 @@
   <button id="yellow-btn">Spark</button>
   <button id="blue-btn">Freeze</button>
   <p id="status">Watching for git changes...</p>
+
+  <footer>
+    <p>im a footer</p>
+  </footer>
 
   <script>
     let lastVersion = null;
