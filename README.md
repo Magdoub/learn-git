@@ -2,7 +2,7 @@
 
 A simple HTML project for learning Git basics.
 
-## What's inside
+## What's inside this cool repo
 
 - `index.html` — a basic webpage with a live reload feature and a green Explode button
 - `version.txt` — used to trigger automatic page refreshes in the browser
