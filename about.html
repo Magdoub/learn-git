@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Hello World</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      background: #f5f5f5;
+      padding-top: 80px;
+      padding-bottom: 120px;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #333;
+      padding: 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    nav h2 {
+      margin: 0;
+      color: white;
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #2ecc71;
+    }
+    nav a.active {
+      color: #2ecc71;
+    }
+    h1 { color: #333; }
+    p.subtitle {
+      color: #888;
+      margin-top: -8px;
+      margin-bottom: 24px;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #222;
+      padding: 24px;
+      text-align: center;
+      color: white;
+      font-size: 1.2rem;
+      box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .social-icon {
+      width: 32px;
+      height: 32px;
+      border: 2px solid white;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .social-icon:hover {
+      background: rgba(255,255,255,0.1);
+    }
+    .about-section {
+      max-width: 700px;
+      width: 90%;
+      margin: 12px auto;
+      padding: 28px;
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .about-section h2 {
+      color: #333;
+      margin-top: 0;
+    }
+    .about-section p {
+      color: #555;
+      line-height: 1.6;
+    }
+    .values-list {
+      list-style: none;
+      padding: 0;
+    }
+    .values-list li {
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      background: #fafafa;
+      color: #444;
+      font-size: 1rem;
+      border-left: 4px solid #ccc;
+    }
+    .values-list li:nth-child(1) { border-left-color: #2ecc71; }
+    .values-list li:nth-child(2) { border-left-color: #f1c40f; }
+    .values-list li:nth-child(3) { border-left-color: #3498db; }
+    .values-list li:nth-child(4) { border-left-color: #9b59b6; }
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+    .team-card {
+      text-align: center;
+      padding: 16px;
+      flex: 1 1 140px;
+      max-width: 180px;
+    }
+    .team-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .team-card h3 {
+      margin: 0 0 4px;
+      color: #333;
+    }
+    .team-card p {
+      margin: 0;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .contact-btn {
+      margin-top: 12px;
+      padding: 12px 28px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact-btn:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h2>Hello</h2>
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+  </nav>
+
+  <h1>About Us</h1>
+  <p class="subtitle">Learn more about our team and mission.</p>
+
+  <div class="about-section">
+    <h2>Our Mission</h2>
+    <p>We believe in making things simple and fun. Our goal is to build tools that help people learn, collaborate, and create — without getting in the way. Whether you're just getting started or have been at it for years, we want to make your experience a little better every day.</p>
+  </div>
+
+  <div class="about-section">
+    <h2>Our Values</h2>
+    <ul class="values-list">
+      <li><strong>Simplicity</strong> — Keep things clear and easy to understand.</li>
+      <li><strong>Curiosity</strong> — Never stop asking questions and exploring.</li>
+      <li><strong>Collaboration</strong> — Great things are built together.</li>
+      <li><strong>Fun</strong> — If it's not enjoyable, we're doing it wrong.</li>
+    </ul>
+  </div>
+
+  <div class="about-section">
+    <h2>Meet the Team</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar" style="background: #3498db;">AA</div>
+        <h3>Alice A.</h3>
+        <p>Designer</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background: #2ecc71;">BB</div>
+        <h3>Bob B.</h3>
+        <p>Developer</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background: #9b59b6;">CC</div>
+        <h3>Carol C.</h3>
+        <p>Manager</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-section">
+    <h2>Get in Touch</h2>
+    <p>Have a question or just want to say hello? We'd love to hear from you.</p>
+    <button class="contact-btn" onclick="alert('Thanks for reaching out!')">Contact Us</button>
+  </div>
+
+  <footer>
+    <p>im a footer</p>
+    <div class="social-icons">
+      <div class="social-icon"></div>
+      <div class="social-icon"></div>
+      <div class="social-icon"></div>
+      <div class="social-icon"></div>
+    </div>
+  </footer>
+
+  <script>
+    let lastVersion = null;
+
+    async function checkVersion() {
+      try {
+        const res = await fetch('version.txt?t=' + Date.now());
+        const version = await res.text();
+        if (lastVersion === null) {
+          lastVersion = version;
+        } else if (version !== lastVersion) {
+          setTimeout(() => location.reload(), 300);
+        }
+      } catch (e) {
+        // version.txt not yet available
+      }
+    }
+
+    setInterval(checkVersion, 1000);
+    checkVersion();
+  </script>
+</body>
+</html>
